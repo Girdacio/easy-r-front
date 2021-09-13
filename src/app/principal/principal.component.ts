@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-principal',
+  selector: 'principal',
   templateUrl: './principal.component.html',
   styleUrls: ['./principal.component.scss']
 })
@@ -16,6 +16,6 @@ export class PrincipalComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver) { }
 
 }

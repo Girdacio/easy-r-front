@@ -1,0 +1,6 @@
+<form [formGroup]="formCardInput" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+        <mat-label>{{ label }}</mat-label>
+        <input matInput formControlName="cardInput">
+    </mat-form-field>
+</form>

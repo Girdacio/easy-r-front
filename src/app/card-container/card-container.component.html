@@ -1,0 +1,11 @@
+<div class="container">
+
+    <card-input [label]="label" (newItemEvent)="addItem($event)"></card-input>
+
+    <ul class="lista-cards">
+        <li *ngFor="let item of items">
+            <card [cardType]="cardType" [text]="item"></card>
+        </li>
+    </ul>
+
+</div>
