@@ -11,6 +11,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SocketIoConfig, SocketIoModule } from 'ngx-socket-io';
 import { AppComponent } from './app.component';
 import { CardContainerComponent } from './card-container/card-container.component';
 import { CardInputComponent } from './card-input/card-input.component';
@@ -18,6 +19,7 @@ import { CardComponent } from './card/card.component';
 import { ColumnContainerComponent } from './column-container/column-container.component';
 import { PrincipalComponent } from './principal/principal.component';
 
+const config: SocketIoConfig = { url: 'http://localhost:3000', options: {autoConnect:false} };
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { PrincipalComponent } from './principal/principal.component';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatCardModule
+    MatCardModule,
+    SocketIoModule.forRoot(config)
   ],
   providers: [],
   bootstrap: [AppComponent]
