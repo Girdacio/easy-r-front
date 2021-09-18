@@ -1,0 +1,17 @@
+<mat-card>
+  <form [formGroup]="mainForm">
+    <div class="container">
+      <button mat-raised-button color="primary">Novo</button>
+      <br />
+      <span>OU</span>
+      <br />
+      <div class="entrar-div">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Retro ID</mat-label>
+          <input matInput formControlName="retroID">
+        </mat-form-field>
+        <button type="submit" [disabled]="mainForm.invalid" mat-stroked-button color="primary">Entrar</button>
+      </div>
+    </div>    
+  </form>  
+</mat-card>

@@ -17,18 +17,20 @@ import { CardContainerComponent } from './card-container/card-container.componen
 import { CardInputComponent } from './card-input/card-input.component';
 import { CardComponent } from './card/card.component';
 import { ColumnContainerComponent } from './column-container/column-container.component';
-import { PrincipalComponent } from './principal/principal.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { MainFormComponent } from './main-form/main-form.component';
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {autoConnect:false} };
 
 @NgModule({
   declarations: [
     AppComponent,
-    PrincipalComponent,
+    SidebarComponent,
     CardContainerComponent,
     ColumnContainerComponent,
     CardInputComponent,
-    CardComponent
+    CardComponent,
+    MainFormComponent
   ],
   imports: [
     BrowserModule,
