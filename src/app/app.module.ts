@@ -11,16 +11,15 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SocketIoConfig, SocketIoModule } from 'ngx-socket-io';
+import { SocketIoModule } from 'ngx-socket-io';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardContainerComponent } from './card-container/card-container.component';
 import { CardInputComponent } from './card-input/card-input.component';
 import { CardComponent } from './card/card.component';
 import { ColumnContainerComponent } from './column-container/column-container.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { MainFormComponent } from './main-form/main-form.component';
-
-const config: SocketIoConfig = { url: 'http://localhost:3000', options: {autoConnect:false} };
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +33,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {autoCon
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
     MatToolbarModule,
@@ -45,7 +45,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {autoCon
     MatInputModule,
     ReactiveFormsModule,
     MatCardModule,
-    SocketIoModule.forRoot(config)
+    SocketIoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
